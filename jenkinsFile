@@ -21,7 +21,7 @@ pipeline {
             steps {
 	       bat "echo ${params.EmailRecipient}"
 	       bat "echo ${params.region}"    
-               sh 'mvn clean package sonar:sonar -Dsonar.host.url=http://localhost:9000/ -DproxySet=true -DproxyHost=www-proxy.us.oracle.com -DproxyPort=80'
+               bat 'mvn clean package sonar:sonar -Dsonar.host.url=http://localhost:9000/ -DproxySet=true -DproxyHost=www-proxy.us.oracle.com -DproxyPort=80'
 		  //sh 'mvn clean package -DproxySet=true -DproxyHost=www-proxy.us.oracle.com -DproxyPort=80'
 		   	nexusArtifactUploader(
     			nexusVersion: 'nexus3',
