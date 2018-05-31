@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+     parameters {
+        string(defaultValue: "", description: 'What environment?', name: 'Environment')
+        // choices are newline separated
+        choice(choices: 'US-EAST-1\nUS-WEST-2', description: 'What AWS region?', name: 'region')
+    }
+    tools {
+        maven 'Maven_home'
+        jdk 'java_home'
+    }
+    stages {
+        stage ('Checkout'){
+            steps 
+            {
+                git (
+                    url: 'https://github.com/rituhans/firstApp',
+                    credentialsId: 'eb741e10-6572-44f7-9d59-71f9da6a85cf'
+                )
+            }
+            
+            }
+    }
+}
