@@ -30,7 +30,7 @@ pipeline {
     			groupId: 'com.mkyong',
     			version: '1.0-SNAPSHOT',
     			repository: 'maven-snapshots',
-    			credentialsId: 'Mum_Nexus_server',
+    			credentialsId: 'admin',
     			artifacts: [
         		[artifactId: 'CounterWebApp',
          		classifier: '',
