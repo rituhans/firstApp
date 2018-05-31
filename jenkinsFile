@@ -15,7 +15,7 @@ pipeline {
             {
                 git (
                     url: 'https://github.com/rituhans/firstApp',
-                    credentialsId: 'eb741e10-6572-44f7-9d59-71f9da6a85cf'
+                    credentialsId: 'c1dec550-3318-4a9a-9201-671abcf99220'
                 )
             }
             
